@@ -1,0 +1,12 @@
+-
+  name: 'play1'
+  hosts: cashplus_prod
+  remote_user: prod
+  tasks:
+    -
+      name: 'command module'
+      copy:
+        src: '/var/lib/jenkins/workspace/java-application/target/my-app-1.0-SNAPSHOT.jar'
+        dest: '/cashplus'
+        mode: '0777'
+        
